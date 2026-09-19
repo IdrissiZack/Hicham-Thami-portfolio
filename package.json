@@ -1,0 +1,23 @@
+{
+  "name": "hicham-thami-portfolio",
+  "version": "1.0.0",
+  "description": "Institutional portfolio website — Hicham Thami, International Relations & Diplomacy",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "lucide-react": "^1.47.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "private": true,
+  "type": "module"
+}
