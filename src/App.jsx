@@ -5,6 +5,7 @@ import Profile from "./sections/Profile";
 import Forums from "./sections/Forums";
 import Engagements from "./sections/Engagements";
 import Contact from "./sections/Contact";
+import PersonSchema from "./components/PersonSchema";
 
 function MinimalHeader() {
   return (
@@ -37,6 +38,8 @@ function MinimalHeader() {
 export default function App() {
   return (
     <>
+      <PersonSchema />
+
       <a
         href="#profile"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:bg-gold focus:px-4 focus:py-2 focus:text-navy-dark"
@@ -52,6 +55,7 @@ export default function App() {
         <Forums />
         <Engagements />
         <Contact />
+        <PersonSchema />
       </main>
 
       <Footer />
