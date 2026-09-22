@@ -25,15 +25,18 @@ export default function Hero() {
     Thami
   </h1>
 
-  <div className="mt-7 max-w-[48ch] space-y-2">
-    <p className="font-serif text-[17px] font-medium leading-relaxed tracking-[0.02em] text-gold sm:text-[19px]">
-  {profile.title}
-</p>
+ <div className="mt-7 max-w-[48ch]">
+  <p className="font-serif text-[17px] font-medium leading-relaxed tracking-[0.02em] text-gold sm:text-[19px]">
+    {profile.title}
+  </p>
 
-   <p className="font-sans text-[12px] font-light tracking-[0.06em] text-ivory/50 sm:text-[13px]">
-  {profile.subtitle}
-</p>
-  </div>
+  <p
+    dir="rtl"
+    className="mt-0.5 font-serif text-[15px] font-medium leading-relaxed text-ivory/80 sm:text-[16px]"
+  >
+    {profile.titleAr}
+  </p>
+</div>
 
   <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
     <Button href="#profile" variant="solid">
