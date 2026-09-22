@@ -2,11 +2,8 @@ import Footer from "./components/Footer";
 
 import Hero from "./sections/Hero";
 import Profile from "./sections/Profile";
-import Relations from "./sections/Relations";
 import Forums from "./sections/Forums";
 import Engagements from "./sections/Engagements";
-import Publications from "./sections/Publications";
-import Gallery from "./sections/Gallery";
 import Contact from "./sections/Contact";
 
 function MinimalHeader() {
@@ -52,11 +49,8 @@ export default function App() {
       <main>
         <Hero />
         <Profile />
-        <Relations />
         <Forums />
         <Engagements />
-        <Publications />
-        <Gallery />
         <Contact />
       </main>
 

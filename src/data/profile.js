@@ -26,10 +26,8 @@ export const profile = {
   expertise: [
     "Morocco–Spain Relations",
     "International Cooperation",
-    "Cultural Dialogue",
-    "Cultural Diplomacy",
     "Institutional Engagement",
-    "Mediterranean Relations",
+     "Cultural Diplomacy",
   ],
 
   highlights: [
@@ -40,6 +38,17 @@ export const profile = {
       value: "National Forum on Moroccan-Spanish Relations",
     },
     { label: "Role", value: "Director of the Forum" },
+  ],
+    officialEngagements: [
+    {
+      year: "2025",
+      title: "Humanitarian Initiative — Valencia",
+      category: "Official Correspondence",
+      description:
+        "Initiative proposing recognition of women volunteers involved in the Valencia floods.",
+      institution: "Spanish Royal Household — La Zarzuela",
+      date: "9 June 2025",
+    },
   ],
 
   contact: {

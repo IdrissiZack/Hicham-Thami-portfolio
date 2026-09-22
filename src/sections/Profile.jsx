@@ -80,7 +80,7 @@ export default function Profile() {
       </h3>
     </div>
 
-    <ul className="mt-7 grid gap-x-10 gap-y-0 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="mt-7 grid gap-x-10 gap-y-0 sm:grid-cols-2">
       {profile.expertise.map((item) => (
         <li
           key={item}
