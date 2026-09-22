@@ -1,8 +1,8 @@
 export const profile = {
   name: "Hicham Thami",
 
-  title: "International Relations & Cultural Cooperation",
-
+title: "Regional President — National Authority for the Defense of Territorial Unity",
+subtitle: "Director — National Forum on Moroccan-Spanish Relations",
   location: "Morocco — Spain",
 
   tagline:

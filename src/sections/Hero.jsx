@@ -16,36 +16,36 @@ export default function Hero() {
 
       <div className="shell relative z-10 grid w-full items-center gap-14 lg:grid-cols-12 lg:gap-16">
 
-        {/* Text */}
-        <div className="order-2 lg:order-1 lg:col-span-7">
+       {/* Text */}
+<div className="order-2 lg:order-1 lg:col-span-7">
 
-          <p className="font-sans text-[10px] font-medium tracking-[0.32em] text-gold sm:text-xs">
-            INTERNATIONAL RELATIONS
-          </p>
+  <h1 className="max-w-[8ch] font-serif text-[3.4rem] font-light leading-[0.92] tracking-[-0.02em] text-ivory sm:text-7xl lg:text-[5.8rem]">
+    Hicham
+    <br />
+    Thami
+  </h1>
 
-          <h1 className="mt-5 max-w-[8ch] font-serif text-[3.4rem] font-light leading-[0.92] tracking-[-0.02em] text-ivory sm:text-7xl lg:text-[5.8rem]">
-            Hicham
-            <br />
-            Thami
-          </h1>
+  <div className="mt-7 max-w-[48ch] space-y-2">
+    <p className="font-serif text-[17px] font-medium leading-relaxed tracking-[0.02em] text-gold sm:text-[19px]">
+  {profile.title}
+</p>
 
-          <p className="mt-7 max-w-[32ch] font-sans text-[13px] font-light uppercase tracking-[0.18em] text-ivory/65 sm:text-sm">
-            Cultural Cooperation
-            <span className="mx-2 text-gold/70">·</span>
-            Morocco — Spain
-          </p>
+   <p className="font-sans text-[12px] font-light tracking-[0.06em] text-ivory/50 sm:text-[13px]">
+  {profile.subtitle}
+</p>
+  </div>
 
-          
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <Button href="#profile" variant="solid">
-              Explore Profile
-            </Button>
+  <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
+    <Button href="#profile" variant="solid">
+      Explore Profile
+    </Button>
 
-            <Button href="#contact" variant="outline">
-              Contact
-            </Button>
-          </div>
-        </div>
+    <Button href="#contact" variant="outline">
+      Contact
+    </Button>
+  </div>
+
+</div>
 
         {/* Portrait */}
         <div className="order-1 lg:order-2 lg:col-span-5">
