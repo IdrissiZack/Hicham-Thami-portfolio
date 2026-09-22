@@ -16,44 +16,57 @@ export default function Hero() {
 
       <div className="shell relative z-10 grid w-full items-center gap-14 lg:grid-cols-12 lg:gap-16">
 
-       {/* Text */}
-<div className="order-2 lg:order-1 lg:col-span-7">
+        {/* Text */}
+        <div className="order-2 text-center lg:order-1 lg:col-span-7 lg:text-left">
 
-  <h1 className="max-w-[8ch] font-serif text-[3.4rem] font-light leading-[0.92] tracking-[-0.02em] text-ivory sm:text-7xl lg:text-[5.8rem]">
-    Hicham
-    <br />
-    Thami
-  </h1>
+          {/* Name */}
+          <h1 className="mx-auto max-w-[8ch] font-serif text-[3.4rem] font-light leading-[0.92] tracking-[-0.02em] text-ivory sm:text-7xl lg:mx-0 lg:text-[5.8rem]">
+            Hicham
+            <br />
+            Thami
+          </h1>
 
- <div className="mt-7 max-w-[48ch]">
-  <p className="font-serif text-[17px] font-medium leading-relaxed tracking-[0.02em] text-gold sm:text-[19px]">
-    {profile.title}
-  </p>
+          {/* Main Title */}
+          <div className="mt-7 w-full text-center">
+            <p className="font-serif text-[17px] font-medium leading-none tracking-[0.02em] text-gold sm:text-[19px]">
+              {profile.title}
+            </p>
 
-  <p
-    dir="rtl"
-    className="mt-0.5 font-serif text-[15px] font-medium leading-relaxed text-ivory/80 sm:text-[16px]"
-  >
-    {profile.titleAr}
-  </p>
-</div>
+            <p
+              dir="rtl"
+              className="mt-1 font-serif text-[15px] font-medium leading-none text-ivory/80 sm:text-[16px]"
+            >
+              {profile.titleAr}
+            </p>
+          </div>
 
-  <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
-    <Button href="#profile" variant="solid">
-      Explore Profile
-    </Button>
+          {/* Additional Roles */}
+          <div className="mt-4 space-y-1 text-center">
+            {profile.roles?.map((role) => (
+              <p
+                key={role}
+                className="font-sans text-[12px] leading-relaxed tracking-[0.03em] text-ivory/65 sm:text-[13px]"
+              >
+                {role}
+              </p>
+            ))}
+          </div>
 
-    <Button href="#contact" variant="outline">
-      Contact
-    </Button>
-  </div>
+          {/* Buttons */}
+          <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <Button href="#profile" variant="solid">
+              Explore Profile
+            </Button>
 
-</div>
+            <Button href="#contact" variant="outline">
+              Contact
+            </Button>
+          </div>
+        </div>
 
         {/* Portrait */}
         <div className="order-1 lg:order-2 lg:col-span-5">
           <div className="relative mx-auto w-full max-w-[290px] sm:max-w-[350px] lg:max-w-none">
-
             <SmartImage
               src={profile.portrait}
               alt={`${profile.name}, ${profile.title}`}
@@ -62,12 +75,11 @@ export default function Hero() {
               loading="eager"
               imgClassName="slow-zoom"
             />
-
           </div>
         </div>
-
       </div>
 
+      {/* Scroll */}
       <a
         href="#profile"
         aria-label="Scroll to profile"

@@ -1,9 +1,14 @@
 export const profile = {
   name: "Hicham Thami",
 
-title: "Coordinator of Morocco–Spain Relations",
-titleAr: "منسق العلاقات المغربية الإسبانية بين الدولتين",
-subtitle: "Director — National Forum on Moroccan-Spanish Relations",
+  title: "Coordinator of Morocco–Spain Relations",
+  titleAr: "منسق العلاقات المغربية الإسبانية بين الدولتين",
+
+  roles: [
+    "President & Director — National Forum on Moroccan-Spanish Relations",
+    "Director — Peace and Coexistence Center, Málaga",
+  ],
+
   location: "Morocco — Spain",
 
   tagline:
