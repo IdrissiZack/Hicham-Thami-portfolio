@@ -1,58 +1,65 @@
+
 import { engagements } from "../data/engagements";
-import { partners } from "../data/partners";
 import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
 import EngagementCard from "../components/EngagementCard";
 import Reveal from "../components/Reveal";
 
 export default function Engagements() {
+  const upcomingVisits = engagements.filter(
+    (item) => item.type === "Official Visit" && item.status === "upcoming"
+  );
+
+  const completedEngagements = engagements.filter(
+    (item) => item.status === "completed"
+  );
+
   return (
     <Section id="engagements" tone="navy">
       <SectionHeading
-        title="Engagements"
-        tone="dark"
-        intro="Institutional meetings, conferences, partnerships and international cooperation."
+        eyebrow="Diplomatic Engagements"
+        title="Engagements & Official Visits"
+        description="Meetings and initiatives fostering dialogue and cooperation."
       />
 
-      {engagements.length === 0 ? (
-        <p className="mt-10 text-[15px] text-ivory/50">[Engagements to be added]</p>
-      ) : (
-        <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {engagements.map((item, i) => (
-            <Reveal key={`${item.title}-${i}`} delay={(i % 3) * 80} className="h-full">
-              <EngagementCard item={item} />
-            </Reveal>
-          ))}
+      {upcomingVisits.length > 0 && (
+      <div className="mt-12 -mx-4 bg-navy px-4 py-8 sm:-mx-8 sm:px-8 sm:py-10">
+          <h3 className="mb-7 font-serif text-2xl text-ivory">
+            Upcoming Presidential Visits
+          </h3>
+
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {upcomingVisits.map((item, i) => (
+              <Reveal
+                key={item.title}
+                delay={(i % 3) * 80}
+                className="h-full"
+              >
+                <EngagementCard item={item} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       )}
 
-      {partners.length > 0 && (
-        <Reveal className="mt-16">
-          <div className="rule-gold opacity-40" />
-          <h3 className="mt-10 text-center font-serif text-2xl text-ivory">
-            Institutions & Partners
-          </h3>
-          <ul className="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {partners.map((partner, i) => (
-              <li key={`${partner.name}-${i}`}>
-                {partner.link ? (
-                  <a
-                    href={partner.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-sans text-[13px] tracking-[0.1em] text-ivory/65 transition-colors hover:text-gold"
-                  >
-                    {partner.name}
-                  </a>
-                ) : (
-                  <span className="font-sans text-[13px] tracking-[0.1em] text-ivory/65">
-                    {partner.name}
-                  </span>
-                )}
-              </li>
+      {completedEngagements.length > 0 && (
+        <div className="mt-12">
+          <h3 className="mb-7 font-serif text-3xl text-ivory sm:text-4xl">
+  Past Activities & Initiatives
+</h3>
+
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {completedEngagements.map((item, i) => (
+              <Reveal
+                key={item.title}
+                delay={(i % 3) * 80}
+                className="h-full"
+              >
+                <EngagementCard item={item} />
+              </Reveal>
             ))}
-          </ul>
-        </Reveal>
+          </div>
+        </div>
       )}
     </Section>
   );

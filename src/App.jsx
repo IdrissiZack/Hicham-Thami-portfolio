@@ -49,14 +49,13 @@ export default function App() {
 
       <MinimalHeader />
 
-      <main>
-        <Hero />
-        <Profile />
-        <Forums />
-        <Engagements />
-        <Contact />
-        <PersonSchema />
-      </main>
+     <main>
+  <Hero />
+  <Profile />
+  <Forums />
+  <Engagements />
+  <Contact />
+</main>
 
       <Footer />
     </>

@@ -23,7 +23,7 @@ export default function SectionHeading({
 
     <h2
   className={`mt-3 font-serif text-[2.2rem] leading-[1.05] sm:text-4xl lg:text-[3.2rem] ${
-    isDark ? "text-ivory" : "text-navy-dark"
+  isDark ? "text-ivory" : "text-white"
   }`}
 >
   {title}

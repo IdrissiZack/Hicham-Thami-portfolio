@@ -45,13 +45,14 @@ export default function SmartImage({
           </span>
         </div>
       ) : (
+       
         <img
           src={src}
           alt={alt || ""}
           loading={loading}
           decoding="async"
           onError={() => setFailed(true)}
-          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out ${
+          className={`absolute inset-0 h-full w-full object-contain transition-transform duration-[1200ms] ease-out ${
             zoomOnHover ? "group-hover:scale-105" : ""
           } ${imgClassName}`}
         />

@@ -1,88 +1,70 @@
+
 import { ArrowUpRight } from "lucide-react";
 import SmartImage from "./SmartImage";
 
-/**
- * EngagementCard — institutional meetings, conferences, cooperation.
- */
 export default function EngagementCard({ item }) {
   return (
-    <article className="group flex h-full flex-col border border-ivory/15 bg-navy-dark/40 transition-colors duration-500 hover:border-gold/40">
+    <article className="group flex h-full flex-col border border-white/10 bg-[#101B30] transition-colors duration-500 hover:border-gold/40">
       {item.image && (
         <SmartImage
           src={item.image}
           alt={item.title}
-        ratio="aspect-[4/3]"
+          ratio="aspect-[4/3]"
           tone="dark"
           zoomOnHover
+          imgClassName={
+            item.status === "upcoming"
+              ? "object-cover object-center"
+              : ""
+          }
         />
       )}
 
-      <div className="flex flex-1 flex-col p-6 sm:p-7">
-
-        {/* Type */}
-        {item.type && (
-          <p className="font-sans text-[11.5px] tracking-[0.16em] text-gold">
-            {item.type}
-          </p>
+      <div className="flex flex-1 flex-col p-6">
+        {item.date && (
+          <span className="mb-4 font-sans text-[11px] uppercase tracking-[0.15em] text-gold">
+            {item.date}
+          </span>
         )}
 
-        {/* Title */}
-        <h3 className="mt-3 font-serif text-2xl text-ivory">
+        <h4 className="font-serif text-xl text-ivory transition-colors group-hover:text-gold">
           {item.title}
-        </h3>
+        </h4>
 
-        {/* Role */}
-        {item.role && (
-          <p className="mt-2 font-sans text-[12px] font-medium tracking-[0.08em] text-gold/90">
-            {item.role}
+        {item.location && (
+          <p className="mt-2 font-sans text-xs tracking-wide text-ivory/50">
+            {item.location}
           </p>
         )}
 
-        {/* Date + Location */}
-        {(item.date || item.location) && (
-          <p className="mt-2 font-sans text-[12px] text-ivory/55">
-            {[item.date, item.location].filter(Boolean).join(" — ")}
-          </p>
-        )}
-
-        {/* Description */}
         {item.description && (
-          <p className="mt-4 text-[15px] leading-relaxed text-ivory/75">
+          <p className="mt-4 flex-1 font-sans text-sm leading-7 text-ivory/65">
             {item.description}
           </p>
         )}
 
-        {/* Focus */}
         {item.focus?.length > 0 && (
-          <div className="mt-6">
-            <p className="font-sans text-[10px] font-medium tracking-[0.2em] text-gold">
-              KEY AREAS
-            </p>
-
-            <ul className="mt-3 space-y-2">
-              {item.focus.map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-2 font-sans text-[12.5px] leading-relaxed text-ivory/65"
-                >
-                  <span className="mt-[8px] h-px w-3 shrink-0 bg-gold/60" />
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="mt-5 space-y-2 border-t border-ivory/10 pt-4">
+            {item.focus.map((point, i) => (
+              <li
+                key={`${point}-${i}`}
+                className="flex items-start gap-2 font-sans text-xs leading-5 text-ivory/60"
+              >
+                <span className="mt-1 text-gold">—</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         )}
 
-        {/* Link */}
         {item.link && (
           <a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-1.5 self-start font-sans text-[12.5px] tracking-[0.1em] text-gold transition-colors hover:text-gold-soft"
+            className="mt-6 inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.12em] text-gold transition-colors hover:text-ivory"
           >
-            Details
-            <ArrowUpRight size={14} strokeWidth={1.5} />
+            Read more <ArrowUpRight size={14} />
           </a>
         )}
       </div>
