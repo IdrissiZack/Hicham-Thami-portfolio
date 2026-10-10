@@ -14,7 +14,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(100%_80%_at_75%_20%,rgba(198,161,91,0.12),transparent_60%)]"
       />
 
-      <div className="shell relative z-10 grid w-full items-center gap-14 lg:grid-cols-12 lg:gap-16">
+      <div className="shell relative z-10 grid w-full items-center gap-8 lg:grid-cols-12 lg:gap-10">
 
         {/* Text */}
         <div className="order-2 text-center lg:order-1 lg:col-span-7 lg:text-left">
@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* Portrait */}
         <div className="order-1 lg:order-2 lg:col-span-5">
-          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[420px] lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-[400px] sm:max-w-[480px] lg:max-w-none">``
             <SmartImage
               src={profile.portrait}
               alt={`${profile.name}, ${profile.title}`}
