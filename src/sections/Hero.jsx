@@ -65,8 +65,8 @@ export default function Hero() {
         </div>
 
         {/* Portrait */}
-       <div className="order-1 lg:order-2 lg:col-span-5 lg:-translate-y-24">
-          <div className="relative mx-auto w-full max-w-[400px] sm:max-w-[480px] lg:max-w-none">``
+       <div className="order-1 lg:order-2 lg:col-span-5 -translate-y-6 lg:-translate-y-24">
+          <div className="relative mx-auto w-full max-w-[500px] sm:max-w-[480px] lg:max-w-none">
             <SmartImage
               src={profile.portrait}
               alt={`${profile.name}, ${profile.title}`}
